@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
+    android:background="@drawable/toolbar_details_bg"
+    tools:context=".activities.DetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.Collapsingtoolbar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:background="@drawable/toolbar_details_bg"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Title"
+            app:expandedTitleTextAppearance="@style/Theme.Collapsingtoolbar"
+            app:collapsedTitleTextAppearance="@style/Theme.Collapsingtoolbar"
+            android:id="@+id/collapsing_toolbar">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_gravity="center|center_horizontal"
+                app:layout_collapseMode="parallax"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_shape"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:id="@+id/tv_gst"
+                        android:layout_width="wrap_content"
+                        android:text="@string/details_heading"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:gravity="left"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/search_bg"
+                        android:id="@+id/current_priceTv"
+                        android:layout_width="wrap_content"
+                        android:text="Current Price"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:gravity="left"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/currentPriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="22222"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="#DAD8D8"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/search_bg"
+                    android:layout_width="wrap_content"
+                    android:text="Market Cap"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/marketCapTv"
+                    android:layout_width="wrap_content"
+                    android:text="22222"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="#DAD8D8"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/search_bg"
+                    android:layout_width="wrap_content"
+                    android:text="Market Cap Rank"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/marketCapRankTv"
+                    android:layout_width="wrap_content"
+                    android:text="22222"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="#DAD8D8"
+                android:layout_height="1dp"/>
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/search_bg"
+                android:layout_width="wrap_content"
+                android:text="Fully Diluted Market Cap"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:gravity="left"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/dilutedMarketCapTv"
+                android:layout_width="wrap_content"
+                android:text="22222"
+                android:textSize="15sp"
+                android:gravity="right"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="#DAD8D8"
+                android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/search_bg"
+                    android:layout_width="wrap_content"
+                    android:text="Volume / Market Cap"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/volumeTv"
+                    android:layout_width="wrap_content"
+                    android:text="22222"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="#DAD8D8"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/search_bg"
+                    android:layout_width="wrap_content"
+                    android:text="24h Low / 24h High"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/tv24h"
+                    android:layout_width="wrap_content"
+                    android:text="22222"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="#DAD8D8"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/search_bg"
+                    android:layout_width="wrap_content"
+                    android:text="All-Time High"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/altTv"
+                    android:layout_width="wrap_content"
+                    android:text="22222"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textStyle="bold"
+                    android:id="@+id/altChangePercentTv"
+                    android:layout_width="wrap_content"
+                    android:text="22222"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="#DAD8D8"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/search_bg"
+                    android:layout_width="wrap_content"
+                    android:text="All-Time Low"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/atlTv"
+                    android:layout_width="wrap_content"
+                    android:text="22222"
+                    android:textSize="15sp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/atlChangePercentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="right"
+                    android:text="22222"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:background="#DAD8D8"
+                android:layout_height="1dp"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

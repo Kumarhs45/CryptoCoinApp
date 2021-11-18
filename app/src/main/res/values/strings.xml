@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Synconext Assignment</string>
+    <string name="details_heading"><b>Price and market stats</b></string>
+    <string name="Rs">\u20B9</string>
+</resources>
